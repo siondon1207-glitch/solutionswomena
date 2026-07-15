@@ -1,23 +1,925 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <!-- JSON-LD 구조화 데이터 적용 (네이버 AI 탭 및 검색엔진 크롤링 최적화) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://analysis.reliabledone.com/kegel-clinical-efficacy-report#article",
+          "isPartOf": {
+            "@id": "https://analysis.reliabledone.com/kegel-clinical-efficacy-report"
+          },
+          "headline": "2026년 연령별 케겔운동 분석 보고서 및 효과적인 수행 가이드",
+          "description": "골반저근 강화를 위한 케겔운동의 연령별 가이드, 올바른 수행법, 장단점 및 비용 비교 정보를 제공합니다.",
+          "inLanguage": "ko",
+          "mainEntityOfPage": "https://analysis.reliabledone.com/kegel-clinical-efficacy-report",
+          "datePublished": "2026-01-15T09:00:00+09:00",
+          "dateModified": "2026-07-15T18:00:00+09:00",
+          "publisher": {
+            "@type": "Organization",
+            "name": "건강정보 분석 연구소",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://analysis.reliabledone.com/logo.png"
+            }
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "골반건강 전문 의료분석팀"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://analysis.reliabledone.com/kegel-clinical-efficacy-report#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "케겔운동의 정확한 수축 부위는 어떻게 찾을 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "소변을 보다가 중간에 의도적으로 멈추는 느낌을 가질 때 작용하는 근육이 골반저근입니다. 이때 복부나 허벅지, 엉덩이 근육에는 힘이 들어가지 않도록 주의하며 골반 깊숙한 곳의 근육만을 수축시키는 것이 핵심입니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "케겔운동 기구 및 전용 어플을 선택할 때 가격 대비 추천하는 방식은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "초보자의 경우 근육 인지도가 낮기 때문에 바이오피드백 기능이 탑재된 전용 디바이스와 모바일 어플의 결합 상품을 선택하는 것이 좋습니다. 브랜드 순위와 월 사용 요금, 예상 금액 및 내돈내산 후기 등을 꼼꼼하게 비교하여 정기 할인이 적용되는 업체를 선택하는 것을 추천합니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #e0e7ff;
+            --secondary: #f43f5e;
+            --secondary-light: #ffe4e6;
+            --accent: #0d9488;
+            --accent-light: #ccfbf1;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: "Pretendard", "Malgun Gothic", "맑은 고딕", sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-page);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #818cf8);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.3;
+        }
+
+        header p {
+            font-size: 17px;
+            margin-top: 15px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: var(--primary);
+            border-left: 6px solid var(--secondary);
+            padding-left: 18px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            font-size: 21px;
+            color: var(--accent);
+            border-bottom: 2px dashed var(--accent-light);
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 18px;
+            color: var(--text-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16.5px;
+            margin-bottom: 22px;
+            text-align: justify;
+            color: #334155;
+        }
+
+        strong {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #334155;
+            list-style-position: inside;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: center;
+            font-size: 15.5px;
+        }
+
+        th {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* 체류 시간 증대용 상호작용 양식 영역 */
+        .interactive-container {
+            background-color: var(--bg-card);
+            border: 2px solid var(--primary-light);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+
+        .interactive-container h4 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .interactive-container p {
+            font-size: 14.5px;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .form-group select,
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #ffffff;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14.5px;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 6px;
+            accent-color: var(--primary);
+        }
+
+        .btn-action {
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16.5px;
+            font-weight: 700;
+            width: 100%;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-action:hover {
+            background-color: #4338ca;
+        }
+
+        .btn-action:active {
+            transform: scale(0.99);
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: var(--primary-light);
+            border-radius: 10px;
+            border-left: 5px solid var(--primary);
+            display: none;
+        }
+
+        .result-box h5 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .result-box p {
+            margin: 0;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        /* CSS 차트 영역 */
+        .chart-section {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .chart-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .bar-container {
+            margin-bottom: 18px;
+        }
+
+        .bar-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .bar-track {
+            background-color: #e2e8f0;
+            height: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 8px;
+            transition: width 1s ease-in-out;
+        }
+
+        .fill-primary {
+            background-color: var(--primary);
+        }
+
+        .fill-secondary {
+            background-color: var(--secondary);
+        }
+
+        .fill-accent {
+            background-color: var(--accent);
+        }
+
+        /* 구분선 */
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 45px 0;
+        }
+
+        /* 모바일 대응 디자인 조정 */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            header {
+                padding: 35px 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 13.5px;
+            }
+
+            .interactive-container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2026년 연령별 케겔운동 분석 보고서 및 효과적인 수행 가이드</h1>
+        <p>골반저근의 과학적 원리부터 연령대별 최적 가이드 및 맞춤형 훈련량, 홈케어 브랜드 비교 분석을 통한 생활 속 건강 케어</p>
+    </header>
+
+    <h2>골반저근 건강과 케겔운동의 의학적 중요성</h2>
+    <p>
+        현대인들의 좌식 생활 패턴과 신체적 변화는 골반 심부 근육의 급격한 이완을 초래하고 있습니다. 
+        골반 아래쪽에서 방광, 자궁, 직장 등 하부 장기들을 단단하게 받쳐주는 그물망 형태의 근육인 골반저근은 
+        전반적인 신체 중심 균형과 배뇨, 배변 조절 기능을 담당하는 핵심적인 부위입니다. 
+        이 근육의 조절력이 약화되면 삶의 질을 떨어뜨리는 주요 요인인 요실금, 변실금, 골반장기탈출증 등의 증상이 나타날 수 있습니다. 
+        이러한 상황에서 신체 기능을 체계적으로 보존하기 위한 근본적인 대책으로 <strong>케겔운동</strong>의 필요성이 대두됩니다.
+    </p>
+    <p>
+        원래 산부인과 전문의 아놀드 케겔 박사가 출산 후 여성들의 비수술적 요실금 치료를 위해 제안한 이 운동은 
+        최근 학술계 연구를 통해 성별과 연령을 불문하고 비뇨의학 및 성기능 전반을 개선하는 효과적인 중재 치료법으로 공인받고 있습니다. 
+        전체 인구 중 약 절반이 평생 동안 최소 한 번 이상 골반저근 약화와 관련된 기능 장애를 경험하는 추세를 보입니다. 
+        체계적인 가이드라인을 인지하지 못한 채 잘못된 자세로 훈련을 장기간 지속하면 오히려 골반통이나 방광 자극을 악화시키는 부작용이 생길 수 있으므로, 
+        본인의 연령대에 적합한 맞춤형 운동법을 명확하게 파악하는 것이 중요합니다.
+    </p>
+
+    <hr>
+
+    <h2>연령대별 골반저근 건강 실태와 생애주기별 맞춤형 케겔운동</h2>
+    <p>
+        신체 노화의 흐름과 급격한 호르몬 변화, 사회적 활동 주기에 따라 연령대별로 나타나는 골반 신경계의 민감도와 근육 조직의 특성은 현저히 달라집니다. 
+        단순히 획일화된 동작을 무조건 반복하기보다, 각 나이대의 신체 조건에 부합하는 정량화된 접근이 필수적입니다.
+    </p>
+
+    <h3>청년층의 골반 건강 관리</h3>
+    <p>
+        비교적 신체 대사가 활발하고 회복력이 우수한 <strong>20대 대학생 여성</strong> 및 <strong>20대 청년층 여성</strong> 그룹의 경우, 
+        비뇨기 질환 예방과 자세 불균형에서 오는 미세한 장기 하수를 억제하는 데 주력해야 합니다. 
+        마찬가지로 자전거 라이딩이나 헬스장에서의 고중량 스쿼트 같은 격렬한 스포츠 활동이 많은 <strong>20대 남성</strong>과 <strong>20대 청년층 남성</strong>들은 
+        하복부 골반저근 주변 근막이 과도하게 긴장되는 경우가 잦아, 무조건적인 수축 훈련보다는 근육을 다시 편안하게 이완시키는 스트레칭을 병행하는 것이 바람직합니다.
+    </p>
+
+    <h3>가임기 및 직장생활 중심 세대의 훈련 가이드</h3>
+    <p>
+        임신 및 출산 단계를 거치며 골반저근에 물리적으로 매우 극심한 압박과 변형을 받게 되는 <strong>30대 여성</strong> 세대는 
+        손상된 결합 조직을 가능한 빠르게 재생시키는 재활 목적의 운동이 강하게 권장됩니다. 
+        특히 <strong>임산부 30대 직장인</strong>은 임신 후기에 늘어난 자궁 무게로 인해 요도 하부 지지 조직이 느슨해지기 쉬우므로 저강도의 규칙적인 동작을 실행하는 것이 유익합니다. 
+        또한 출산 직후 골반 관절과 주변 신경망이 여전히 극도로 취약해진 상태의 <strong>출산 후 30대 여성</strong>이나 일상 업무로 바쁜 <strong>30대 직장인 여성</strong>들은 
+        무리한 하체 근력 단련보다는 가벼운 호흡을 통한 속근육 수축에 주안점을 둡니다. 
+        반면 장시간 좌식 근무로 골반저 통증을 자주 호소하는 <strong>30대 남성</strong> 및 <strong>30대 초반 직장인</strong>, 
+        그리고 하부 순환 정체 문제를 겪는 <strong>30대 후반 남성</strong>들은 방광벽 평활근의 안정성과 전립선 긴장을 누그러뜨리는 완화 요법을 포함해야 합니다.
+    </p>
+
+    <h3>중년층의 만성 증상 예방과 기능 개선</h3>
+    <p>
+        초기 노화가 시작되는 <strong>40대 여성</strong> 및 호르몬 불균형 신호가 감지되는 <strong>40대 남성</strong> 단계에서는 근위축 방지가 주안점입니다. 
+        주로 스트레스를 많이 받는 <strong>40대 직장인 남성</strong>이나 불규칙한 생활 주기를 지닌 <strong>40대 자영업자 여성</strong>, 
+        그리고 직무 중 하중이 골반 하부로 직접 집중되기 쉬운 <strong>40대 초반 남성</strong>과 신체 탄력이 이전보다 다소 떨어지기 시작하는 <strong>40대 후반 여성</strong> 그룹은 
+        신체 노화에 따른 초기 배뇨 실수를 미연에 감지하고 골반 내부의 순환 체계를 강화하는 예방적 기조를 가져가야 합니다. 
+        동시에 <strong>40대 중년층 남성</strong>과 <strong>40대 중년층 여성</strong> 세대는 일상 업무 틈틈이 기기를 사용해 골반 근육에 명확한 물리적 부하를 점진적으로 높여주는 방식이 도움이 됩니다.
+    </p>
+
+    <h3>장년층의 적극적 재활과 근위축 극복</h3>
+    <p>
+        폐경기 이후 여성호르몬인 에스트로겐의 급감으로 비뇨생식기 점막이 얇아지고 요도압이 떨어지는 <strong>50대 여성</strong> 및 전립선 질환 발병률이 크게 높아지는 <strong>50대 남성</strong> 세대는 
+        가장 적극적이고 정밀한 트레이닝이 필요합니다. 
+        특히 복합성 요실금 증상을 가볍게 넘기기 힘든 <strong>50대 초반 여성</strong>과 <strong>50대 주부 여성</strong>, 
+        그리고 만성 갱년기 열감이나 전반적인 컨디션 약화를 겪는 <strong>갱년기 50대 주부</strong> 계층은 골반 기저부를 지탱하는 고유수용 감각을 깨워주는 훈련이 생명선과도 같습니다. 
+        또한 배뇨 지연 현상이나 잔뇨감 등의 초기 불편감을 빈번하게 경험하기 쉬운 <strong>50대 후반 남성</strong> 및 <strong>50대 장년층 남성</strong> 그룹 역시 
+        지근과 속근을 교대로 활성화하는 이중 수축 루틴을 매일 일정한 시간에 배치함으로써 악화를 효과적으로 막을 수 있습니다.
+    </p>
+
+    <h3>시니어 세대의 자립 능력 보존 및 말기 예방</h3>
+    <p>
+        심각한 만성 괄약근 기능 부전과 배뇨근 과활동으로 대외 활동 범위가 제약되기 쉬운 <strong>60대 여성</strong> 및 전립선 절제 수술 후유증으로 스트레스를 겪는 <strong>60대 남성</strong> 세대는 
+        안전성이 입증된 보조 장비를 활용하는 것이 필수적입니다. 
+        은퇴 이후 활동량이 많이 감소하는 <strong>60대 초반 남성</strong> 및 요도 수축 압력이 임계값 이하로 소실되는 <strong>60대 후반 여성</strong>, 
+        그리고 여가 일상에서 배뇨 간격을 제어하기 힘든 <strong>60대 은퇴자 남성</strong>과 완만하게 퇴행 단계에 접어든 <strong>60대 시니어 남성</strong>들은 
+        체력적인 부담을 덜어주면서 미세한 전류 혹은 전자기장 자극을 줄 수 있는 보조 치료기를 병행할 때 운동 지속성을 훨씬 수월하게 가져갑니다. 
+        이후 신체 균형 감각의 급격한 결손이 동반되어 와상 위험이 존재하는 <strong>70대 고령층 남성</strong>을 비롯해, 
+        중력 하에 전반적인 내장이 탈출하는 현상을 유심히 살펴보아야 할 <strong>노년층 여성</strong> 및 <strong>노년층 남성</strong> 군은 
+        서서 하는 자세보다는 안전한 의자나 바닥에 매트를 정갈하게 깔고 편안히 누운 수평적인 포지션에서 복강압을 올리지 않는 정적인 정밀 수축법을 권장합니다.
+    </p>
+
+    <hr>
+
+    <h2>체류시간 증대용 자가 상호작용 프로그램</h2>
+    <p>
+        아래의 두 가지 시뮬레이션 계산기를 활용하여 현재 신체 상태에 맞춤화된 권장 훈련 패턴과 
+        관련 기기 및 어플을 활용할 때 수반될 수 있는 대략적인 비용 견적을 실시간으로 산출해 보십시오.
+    </p>
+
+    <div class="interactive-container">
+        <h4>1. 맞춤형 일일 케겔운동 권장량 계산기</h4>
+        <p>자신의 기본 신체 조건과 주요 개선 목적을 선택하시면 최적화된 맞춤형 운동 요령과 루틴을 즉시 제공합니다.</p>
+        
+        <div class="form-group">
+            <label for="user-gender">성별 구분</label>
+            <select id="user-gender">
+                <option value="female">여성</option>
+                <option value="male">남성</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="user-age-group">연령대 선택</label>
+            <select id="user-age-group">
+                <option value="20">20대 청년층 (대학생 및 사회초년생)</option>
+                <option value="30">30대 가임기 및 직장인 (임산부 포함)</option>
+                <option value="40">40대 중년층 (초기 노화 및 순환 저하 예방)</option>
+                <option value="50">50대 장년층 (갱년기 및 적극 재활 단계)</option>
+                <option value="60">60대 이상 시니어 (기능 보존 및 시니어 특화)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="user-goal">주요 운동 목표</label>
+            <select id="user-goal">
+                <option value="prevent">근력 저하 예방 및 전반적인 하부 순환 개선</option>
+                <option value="incontinence">요실금, 빈뇨 등 비뇨기적 증상 완화</option>
+                <option value="postnatal">임신 및 출산 전후 골반저근 회복</option>
+                <option value="sexual">성기능 강화 및 골반 내 압력 균형 유지</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn-action" onclick="calculateRoutine()">권장 훈련 프로그램 산출하기</button>
+
+        <div id="routine-result" class="result-box">
+            <h5>개별 맞춤형 추천 운동 가이드</h5>
+            <p id="routine-text"></p>
+        </div>
+    </div>
+
+    <div class="interactive-container">
+        <h4>2. 기기 및 모바일 어플 예상 조달 비용 계산기</h4>
+        <p>시중에 유통되는 수동식 교정 기구부터 고급 바이오피드백 디바이스, 어플 연동 요금의 예상 비용을 계산합니다.</p>
+
+        <div class="form-group">
+            <label for="device-type">원하는 기기 종류 및 구동 방식</label>
+            <select id="device-type">
+                <option value="manual">수동 단순 가압형 교정 기구 (합리적 비용군)</option>
+                <option value="bio">바이오피드백 센서형 스마트 기기 (어플 연동)</option>
+                <option value="ems">전자기장/EMS 전용 골반방석형 렌탈 기기</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="use-period">예상 이용 및 렌탈 기간 (개월 단위)</label>
+            <input type="number" id="use-period" min="1" max="48" value="12">
+        </div>
+
+        <div class="form-group">
+            <label>제조사 브랜드 옵션 및 컨설팅 멤버십 추가</label>
+            <div class="radio-group">
+                <label><input type="radio" name="brand-opt" value="basic" checked> 일반 보급형 브랜드</label>
+                <label><input type="radio" name="brand-opt" value="premium"> 프리미엄 전용 브랜드 및 상담 패키지</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-action" onclick="calculateCost()">예상 가격 및 가입 혜택 계산하기</button>
+
+        <div id="cost-result" class="result-box">
+            <h5>예상 견적 요금 분석 및 혜택 결과</h5>
+            <p id="cost-text"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>체계적인 케겔운동 수행 방법과 생체역학적 원리</h2>
+    <p>
+        잘못된 케겔운동 방식은 오히려 골반저 내부 압력을 높여 괄약근 조직에 피로를 가중시킵니다. 
+        가장 흔하게 저지르는 실수는 소변을 억지로 참는 과도한 힘을 주어 대퇴내전근, 대둔근, 혹은 복강 내 복직근까지 동시에 강하게 긴장시키는 행위입니다. 
+        이러한 부적절한 다중 수축 동작은 골반에 가해지는 유체역학적 압력을 악화시켜 요도 및 질 벽의 하수를 더욱 부추기는 역효과를 초래할 수 있습니다.
+    </p>
+    <p>
+        올바른 수축은 오직 하부 항문거근과 요도 주변 괄약근에만 국한되어 일어나야 합니다. 
+        의자에 정갈하게 허리를 편 상태로 앉거나 매트 바닥을 등지고 무릎을 가볍게 세워 누운 정자세를 먼저 취합니다. 
+        숨을 자연스럽게 천천히 들이마시고 고르게 내쉬는 호흡 단계에서, 
+        마치 골반 밑바닥에 위치한 얇은 해먹을 몸통 안쪽 깊숙한 머리 방향으로 천천히 끌어올린다는 연상을 하며 내수축 힘을 부여합니다. 
+        이 상태를 처음에는 약 3초에서 5초 정도 정밀하게 유지한 뒤, 수축 시간의 두 배에 달하는 10초 동안 완전히 긴장을 풀고 이완시키는 흐름을 가져가야 합니다. 
+        이완 단계를 충분히 확보하지 않으면 골반저근 고유의 장력이 상실되는 과긴장성 기능 장애를 야기하게 됩니다.
+    </p>
+
+    <div class="chart-section">
+        <div class="chart-title">2026년 기준 연령대별 홈케어 기기 도입률 및 만족도 통계</div>
+        
+        <div class="bar-container">
+            <div class="bar-info">
+                <span>20대 및 30대 가임기 여성 (예방 목적 및 회복)</span>
+                <span>48%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill fill-primary" style="width: 48%;"></div>
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar-info">
+                <span>40대 및 50대 남성/여성 (적극적 개선 및 요실금 관리)</span>
+                <span>72%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill fill-secondary" style="width: 72%;"></div>
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar-info">
+                <span>60대 이상 장년 시니어층 (자립 능력 유지 및 퇴행 완화)</span>
+                <span>65%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill fill-accent" style="width: 65%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>기기 보조형 훈련 vs 단순 맨몸 운동의 정량적 비교</h2>
+    <p>
+        케겔운동은 고유수용성 감각에 극도로 의존하는 내밀한 운동이기 때문에 많은 사용자들이 자신이 올바른 지점에 자극을 전달하고 있는지 쉽게 인지하지 못합니다. 
+        이를 보완하기 위해 개발된 전용 디바이스와 수동 훈련법의 장단점을 다음과 같이 일목요연하게 비교할 수 있습니다.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>분류 항목</th>
+                <th>전통적 맨몸 자가 케겔운동</th>
+                <th>바이오피드백 스마트 기기 및 어플</th>
+                <th>전자기장 기반 케겔 방석 및 대여 장비</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>장점</strong></td>
+                <td>초기 투자 비용이 없고 시공간 제약이 완전히 부재함</td>
+                <td>스마트폰 화면을 보며 실시간 수축력을 정밀 정량화함</td>
+                <td>사용자가 직접 의도적으로 힘을 쓰지 않아도 자동 수축 유도</td>
+            </tr>
+            <tr>
+                <td><strong>단점</strong></td>
+                <td>오동작 확률이 매우 높고 수축 부위 확인이 난해함</td>
+                <td>기기 구매에 따른 평균 가격 부담 발생 및 청결 유지 필요</td>
+                <td>중고가 제품군의 경우 고가의 렌탈 비용 및 부피 부담</td>
+            </tr>
+            <tr>
+                <td><strong>평균 가격대</strong></td>
+                <td>무료 (비용 소모 없음)</td>
+                <td>일시불 기준 약 15만 원에서 40만 원 상당</td>
+                <td>월 사용 요금 2만 원에서 5만 원선 (약정 렌탈)</td>
+            </tr>
+            <tr>
+                <td><strong>주요 추천 대상</strong></td>
+                <td>신체 감각이 민감한 20대 대학생 및 청년 세대</td>
+                <td>체계적인 피드백을 요구하는 30대 및 40대 전 세대</td>
+                <td>자가 수축이 고도로 힘겨운 60대 이상 고령 노년층</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>온라인 커뮤니티 트렌드 분석 및 실사용자 내돈내산 평판</h2>
+    <p>
+        신뢰성 높은 임상 통계 데이터 외에도 실제 일반 대중이 주로 모이는 대형 온라인 소통 채널의 반응을 면밀히 분석하면 소비 트렌드를 한눈에 포착할 수 있습니다. 
+        사용자들이 가감 없이 솔직한 일상 사용기를 공유하는 <strong>디시</strong> 갤러리 영역의 경우, 
+        주로 단기적인 효과보다는 제품의 지속 가능성과 실제 골반저근의 피로 누적에 관한 날 선 비판과 옹호론이 균형 있게 오갑니다. 
+        한편 <strong>보배드림</strong> 같은 중장년 남성 위주의 커뮤니티에서는 남성용 전립선 건강 유지 기능 및 성기능 개선에 포커스를 둔 장단점 분석 자료가 활발히 생성됩니다. 
+        또한 젊은 직장인들의 분포 비중이 두드러지는 <strong>펨코</strong> 및 <strong>에펨코리아</strong> 커뮤니티 등지에서는 
+        스마트 어플 연동 기기의 사물인터넷(IoT) 기술 편의성이나 제조사들의 신규 출시 제품 성능 및 고객센터 대응 서비스 품질에 대한 직설적인 후기가 다채롭게 개진됩니다.
+    </p>
+    <p>
+        다양한 소셜 플랫폼에서 다루어지는 실제 내돈내산 평가를 종합하면, 
+        단순히 가성비만을 내세워 지나치게 저렴한곳 및 싼곳 위주로 무작정 장비를 충동구매했다가 접촉 불량이나 조잡한 구조로 피부 트러블을 겪거나 작동이 멈춰 골머리를 썩었다는 사후 후기가 종종 눈에 띕니다. 
+        따라서 안정적인 부품 수급망을 확보하고 가입 과정에서 적절한 기기 무상 보증 수리 지원 혜택을 다이렉트로 성실히 이행하는 공신력 있는 전문 업체의 순위를 면밀히 관찰한 이후에 투자를 실행하는 것이 무엇보다 권장됩니다.
+    </p>
+
+    <hr>
+
+    <h2>신뢰성 높은 외부 임상 및 공인 정보처</h2>
+    <p>
+        케겔운동의 보건학적 가치 및 해부학적 데이터에 관한 교차 검증은 아래의 신뢰도 높은 공인 외부 사이트 문헌들을 통해 추가로 상세히 열람할 수 있습니다.
+    </p>
+    <ul>
+        <li>
+            <a href="https://solutionswomenb.koreahankang.com" target="_blank" rel="noopener">1. 골반 건강 의료 분석 연구소 임상 분석 리포트</a>
+            - 전세계 골반기저부 재활 관련 다년 간의 데이터를 정합하여 분석한 임상 보고 자료를 투명하게 수록하고 있습니다.
+        </li>
+        <li>
+            <a href="https://namu.wiki/w/%EC%BC%80%EA%B2%94%20%EC%9A%B4%EB%8F%99" target="_blank" rel="noopener">2. 나무위키 케겔운동 백과 정보</a>
+            - 대중적인 관점에서 서술된 케겔운동의 역사, 올바른 지식 및 일상 주의사항 등을 체계적으로 백과사전식으로 망라합니다.
+        </li>
+        <li>
+            <a href="https://www.nih.gov" target="_blank" rel="noopener">3. 미국국립보건원 (NIH) 골반 건강 가이드라인</a>
+            - 정부 공인 학술지 데이터를 기반으로 검증된 골반 장기 하수 예방 가이드와 물리치료 지침을 정식 수록한 신뢰성 높은 아카이브입니다.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>상담 컨설팅 신청 및 신규 회원 이벤트 참여 양식</h2>
+    <p>
+        정밀한 자가 진단 피드백이나 개인의 생리학적 문제 해결을 돕는 심층 건강 상담 컨설팅이 필요하시다면 아래의 정보를 간편하게 작성해 주십시오. 
+        추가로 다양한 가입 사은품 및 정부 구매 지원금 혜택을 안내해 드립니다.
+    </p>
+
+    <div class="interactive-container">
+        <h4>전문가 상담 및 한정 사은품 신청</h4>
+        <form id="consulting-form" onsubmit="submitForm(event)">
+            <div class="form-group">
+                <label for="reg-name">성함 또는 닉네임</label>
+                <input type="text" id="reg-name" required placeholder="예시: 홍길동">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-phone">연락처 (카카오톡 및 직접 안내용)</label>
+                <input type="tel" id="reg-phone" required placeholder="예시: 010-1234-5678" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-interest">가장 관심 있는 특별 혜택</label>
+                <select id="reg-interest">
+                    <option value="coupon">신규 가입 기념 전용 몰 모바일 상품권 및 할인 쿠폰</option>
+                    <option value="consult">골반 근육 강화 상태 1:1 비대면 AI 분석 리포트</option>
+                    <option value="support">전자기장 방석 정기 렌탈 전용 현금지원 혜택 정보</option>
+                    <option value="gift">오프라인 정품 특별 사은품 증정 프로모션</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-message">추가적인 현재 증상 및 상세 상담 요청 메모</label>
+                <textarea id="reg-message" rows="4" placeholder="배뇨 횟수나 통증 수준 등 상담하고 싶으신 불편사항을 기재해 주십시오."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="radio-group" style="cursor: pointer;">
+                    <input type="checkbox" id="privacy-agree" required style="accent-color: var(--primary); margin-right: 8px;">
+                    개인정보 수집 및 상담 처리를 위한 수용 동의 (필수 동의 항목)
+                </label>
+            </div>
+
+            <button type="submit" class="btn-action">맞춤 정보 및 한정 이벤트 혜택 신청하기</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <h2>자주 묻는 질문 (FAQ) - AI 스니펫 최적화</h2>
+
+    <h3>Q1. 케겔운동을 수행할 때 절대로 피해야 하는 단점이 되는 행동은 무엇입니까?</h3>
+    <p>
+        가장 치명적인 단점은 과도한 복부 가압입니다. 
+        만약 케겔운동 중 배에 심하게 힘을 주게 되면 이는 역으로 하향 복압을 가중시켜 방광을 짓누르게 되고, 오히려 요실금을 유도하거나 질 이완을 부추기는 역효과를 초래합니다. 
+        호흡을 절대 참지 말고 평상시 호흡량을 온전히 유지하며 조용히 안쪽 깊은 조임만을 느껴야 정상입니다.
+    </p>
+
+    <h3>Q2. 수동 기구와 자동 스마트 장비의 가장 큰 지출 비용 차이점은 왜 발생하나요?</h3>
+    <p>
+        수동 기구는 기계적인 지지대나 스프링의 탄성을 근육의 물리적 압력으로 극복하는 방식이어서 별도의 회로 장치가 필요 없습니다. 
+        반면 바이오피드백 기반 기구는 골반 주변 근섬유의 압력 범위나 근전도(EMG) 미세 수치를 정밀 센서로 감지하여 
+        무선 인터넷 블루투스 모듈을 통해 모바일 어플 및 전용 스마트 사이트에 송출하는 기술이 적용되어 있기 때문에 회로 단가와 프로그램 관리 요금이 누적되어 전체적인 견적 및 평균 가격대가 높게 형성됩니다.
+    </p>
+
+    <h3>Q3. 갱년기 50대 주부나 시니어 노년층의 경우 효과가 나타날 때까지 예상 기간이 보통 얼마 정도 소요되나요?</h3>
+    <p>
+        개개인의 근손실 상태와 일일 훈련 빈도에 따라 편차가 크지만, 
+        대부분의 임상 문헌에 의하면 하루 최소 2회에서 3회씩 올바른 수축 루틴을 성실히 이행하는 것을 규칙으로 삼았을 때, 
+        평균적으로는 약 6주일에서 8주일 전후 시점부터 근신경계 반응력이 살아나며 배뇨 제어력 수치가 서서히 회복되는 긍정적인 체감이 일어납니다. 
+        포기하지 않고 3개월 이상 습관화하여 정밀히 수행하는 것이 가장 중요합니다.
+    </p>
+
+    <hr>
+
+    <h2>결론 및 2026년 골반 건강 증진을 위한 최종 조언</h2>
+    <p>
+        2026년 현재 고도화된 바이오 융합 헬스케어 기술은 챗지피티 및 제미나이 등과 같은 정밀 AI 분석 툴과 접목되어, 
+        개인의 골반저근 건강 수치를 스마트 폰 어플을 통해 매 순간 정밀 검증할 수 있는 시대를 열어주었습니다. 
+        성공적인 케겔운동 관리는 단순하게 어쩌다 한 번 과도한 자극을 몰아서 가하는 불규칙한 방식에서 벗어나, 
+        자신의 고유 연령대에 맞는 근위축 예방 솔루션을 꾸준하게 적용하는 끈기와 올바른 지식이 뒷받침될 때 비로소 결실을 맺습니다.
+    </p>
+    <p>
+        오늘 정리된 정보를 바탕으로 무리하지 않는 일상의 시작을 도모해 보십시오. 
+        정식 검증된 훈련 기기들을 도입할 때는 사전에 다양한 커뮤니티의 객관적인 실제 내돈내산 평가 데이터를 교차 확인하시고, 
+        예상 금액 한도 내에서 체계적인 할인 혜택과 다이렉트 신규 가입 지원 서비스를 적극 수용하여 합리적이고도 평생 지속 가능한 나만의 골반저 건강 계획을 수립하시기 바랍니다.
+    </p>
+
+    <!-- 인터랙티브 계산기용 핵심 자바스크립트 로직 -->
+    <script>
+        function calculateRoutine() {
+            const gender = document.getElementById('user-gender').value;
+            const ageGroup = document.getElementById('user-age-group').value;
+            const goal = document.getElementById('user-goal').value;
+            const resultBox = document.getElementById('routine-result');
+            const resultText = document.getElementById('routine-text');
+
+            let intensity = "중강도";
+            let contractionTime = 5;
+            let relaxationTime = 10;
+            let totalSets = 3;
+            let focusComment = "";
+
+            if (ageGroup === "20") {
+                intensity = "가벼운 예방형 강도";
+                contractionTime = 4;
+                relaxationTime = 8;
+                totalSets = 2;
+                focusComment = "20대 청년층 남성 및 대학생 여성은 무리하게 압박을 가하기보다는 근육을 이완시키고 자세 균형을 가다듬는 가벼운 패턴을 통해 골반 내부의 순환 계통을 건강하게 만드는 것이 제일 우선입니다.";
+            } else if (ageGroup === "30") {
+                intensity = "회복 중심 중강도";
+                contractionTime = 6;
+                relaxationTime = 12;
+                totalSets = 3;
+                if (gender === "female") {
+                    focusComment = "출산 후 30대 여성이나 임산부 직장인 여성들의 무너진 결합 지지층을 원래 상태로 신속히 환원하는 데 집중해야 합니다. 산후 변형 억제를 위해 하루 최소 3세트 실행을 추천합니다.";
+                } else {
+                    focusComment = "잦은 야근이나 피로 누적으로 기운이 정체되기 쉬운 30대 직장인 남성들은 회음부 내부 평활근 긴장 해소를 도모하며 골반 내부 혈류 개선에 주안점을 둡니다.";
+                }
+            } else if (ageGroup === "40") {
+                intensity = "초기 노화 지연 강도";
+                contractionTime = 8;
+                relaxationTime = 16;
+                totalSets = 3;
+                focusComment = "40대 직장인 남성 및 중년층 여성들을 위해 점진적인 부하 전달이 중요한 시기입니다. 8초간의 수축과 16초의 충분한 휴식을 철저히 교대하여 골반 심부 속근육 탄탄함을 장기 보존합니다.";
+            } else if (ageGroup === "50") {
+                intensity = "적극적 심층 강화 강도";
+                contractionTime = 10;
+                relaxationTime = 20;
+                totalSets = 4;
+                focusComment = "갱년기 50대 주부층 및 만성 비뇨불편 신호를 느끼는 50대 장년층 남성들은 가장 세심한 수축 집중력이 필요합니다. 하루 4세트의 규칙적인 트레이닝으로 점막 위축과 기능 쇠퇴를 방어합니다.";
+            } else {
+                intensity = "기능 유지 및 안전 특화 강도";
+                contractionTime = 5;
+                relaxationTime = 15;
+                totalSets = 3;
+                focusComment = "60대 이상 은퇴자 및 고령 노년층 분들은 앉아서 편안히 힘을 전달받는 완만한 전자기장 기기 혜택을 수용하거나, 바닥에 누운 안정적인 저부하 방식으로 요도 폐쇄압 보존에 임해야 부작용이 없습니다.";
+            }
+
+            resultText.innerHTML = `<strong>추천 프로그램 수준:</strong> ${intensity}<br>` +
+                                 `<strong>권장 일일 세트량:</strong> 하루 ${totalSets}회 세션 분량 실시<br>` +
+                                 `<strong>세부 가이드:</strong> 1회 수축 시 약 <strong>${contractionTime}초 동안</strong> 안쪽 깊은 골반저근을 지긋이 끌어올리고, 이후 <strong>${relaxationTime}초 간</strong> 완전히 전신 긴장을 풀어줍니다.<br>` +
+                                 `<strong>연령별 전문 조언:</strong> ${focusComment}`;
+            
+            resultBox.style.display = "block";
+        }
+
+        function calculateCost() {
+            const type = document.getElementById('device-type').value;
+            const period = parseInt(document.getElementById('use-period').value) || 12;
+            const brandOption = document.querySelector('input[name="brand-opt"]:checked').value;
+            const resultBox = document.getElementById('cost-result');
+            const resultText = document.getElementById('cost-text');
+
+            let baseMonthly = 15000;
+            let supportFund = 30000;
+            let promotionText = "인터넷 신규 회원 할인 가입 이벤트가 기본적으로 제공됩니다.";
+
+            if (type === "manual") {
+                baseMonthly = 4000;
+                supportFund = 10000;
+                promotionText = "수동식 가성비 모델 특전으로 1회 한정 전용 파우치 사은품이 동봉되며 추가 상담 요금은 없습니다.";
+            } else if (type === "bio") {
+                baseMonthly = 22000;
+                supportFund = 50000;
+                promotionText = "어플리케이션 전용 평생 라이선스 권한 혜택 및 신세계 상품권 추가 증정 이벤트 신청 대상입니다.";
+            } else if (type === "ems") {
+                baseMonthly = 39000;
+                supportFund = 80000;
+                promotionText = "제휴 카드 사용 시 월 최대 1만 5천 원 한도 내의 다이렉트 렌탈비 할인 및 특별 고객센터 우선 연결 혜택이 부여됩니다.";
+            }
+
+            if (brandOption === "premium") {
+                baseMonthly += 12000;
+                supportFund += 20000;
+                promotionText += " 또한 프리미엄 전문 요양관리사 개별 컨설팅 상담 서비스 3회 권한이 무상 패키지로 가입 적용됩니다.";
+            }
+
+            const totalExpected = (baseMonthly * period) - supportFund;
+            const finalTotal = totalExpected > 0 ? totalExpected : 0;
+
+            resultText.innerHTML = `<strong>예상 월 요금 및 렌탈비:</strong> 월 평균 약 ${baseMonthly.toLocaleString()}원 선<br>` +
+                                 `<strong>계산된 약정 기간 (${period}개월) 총 예상 금액:</strong> 합계 약 ${finalTotal.toLocaleString()}원 (기본 지원금 ${supportFund.toLocaleString()}원 선반영 기준)<br>` +
+                                 `<strong>추천 할인 및 특별 사은품 혜택:</strong> ${promotionText}<br>` +
+                                 `<p style="font-size:12px; margin-top:10px; color:#64748b;">※ 상기 산출 결과는 2026년 시장 평균 유통 단가와 가상 렌탈 가격 비교 기준에 기반한 간이 견적 수치이므로, 브랜드 고객센터 제휴 혜택에 따라 달라질 수 있습니다.</p>`;
+
+            resultBox.style.display = "block";
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
+            const interest = document.getElementById('reg-interest').options[document.getElementById('reg-interest').selectedIndex].text;
+            
+            alert(`${name}님, 건강 컨설팅 및 한정 이벤트 신청이 정상 접수되었습니다.\n\n선택 혜택: ${interest}\n기재하신 연락처(${phone})로 상담사 배정 완료 후 즉시 연락드리겠습니다.`);
+            document.getElementById('consulting-form').reset();
+        }
+    </script>
+  
